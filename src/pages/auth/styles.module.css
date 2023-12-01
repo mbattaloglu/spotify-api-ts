@@ -12,11 +12,13 @@
 }
 
 .login {
-  text-decoration: none;
+  outline: none;
+  border: none;
   color: #fff;
   background-color: green;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .login:hover {
