@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.login {
+  text-decoration: none;
+  color: #fff;
+  background-color: green;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.login:hover {
+  background-color: #fff;
+  color: green;
+  transition: 0.5s;
+  border: 0.1rem solid green;
+}

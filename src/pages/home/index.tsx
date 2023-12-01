@@ -1,27 +1,19 @@
-import { useEffect } from "react";
+import { useUserStore } from "../../stores/useUserStore";
 
 const Home: React.FC = () => {
-  useEffect(() => {
-    const authToken = window.localStorage.getItem("auth_token")!;
-
-    const getUserData = async () => {
-      await fetch("https://api.spotify.com/v1/me", {
-        headers: {
-          Authorization: "Bearer " + authToken,
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => console.log(data));
-    };
-
-    getUserData();
-  }, []);
+  const user = useUserStore((state) => state.user);
 
   return (
     <div>
-      <h1>Home</h1>
+      <img src={user?.getImages()[1].getUrl()} alt="profile-img" />
+      <h1>{user?.getDisplayName()}</h1>
+      <p>Followers:{user?.getFollowers()}</p>
+      <a target="_blank" rel="noreferrer" href={user?.getUserLink()}>
+        Spotify Link
+      </a>
     </div>
   );
 };
+
 
 export default Home;
