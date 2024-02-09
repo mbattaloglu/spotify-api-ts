@@ -12,6 +12,7 @@
 }
 
 .login {
+  text-decoration: none;
   outline: none;
   border: none;
   color: #fff;
@@ -19,11 +20,11 @@
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .login:hover {
   background-color: #fff;
   color: green;
-  transition: 0.5s;
   border: 0.1rem solid green;
 }

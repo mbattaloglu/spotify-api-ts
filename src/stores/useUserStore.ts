@@ -3,18 +3,18 @@ import User from "../classes/User";
 
 type UserStore = {
   user: User | null;
-  authToken: string | null;
+  accessToken: string | null;
   setUser: (user: User) => void;
   clearUser: () => void;
-  setAuthToken: (authToken: string) => void;
-  clearAuthToken: () => void;
+  setAccessToken: (authToken: string) => void;
+  clearAccessToken: () => void;
 };
 
 export const useUserStore = create<UserStore>((set) => ({
   user: null,
-  authToken: null,
+  accessToken: null,
   setUser: (user: User) => set({ user }),
   clearUser: () => set({ user: null }),
-  setAuthToken: (authToken: string) => set({ authToken }),
-  clearAuthToken: () => set({ authToken: null }),
+  setAccessToken: (authToken: string) => set({ accessToken: authToken }),
+  clearAccessToken: () => set({ accessToken: null }),
 }));
